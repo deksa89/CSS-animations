@@ -1,0 +1,124 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url(background.jpg);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 17rem auto;
+}
+
+#kocka1 {
+  width: 300px;
+  height: 300px;
+  margin: 0 65px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -600px;
+  border: 10px solid white;
+  background-color: rgba(118, 58, 0, 0.5);
+  /* skracena verzija pisanja animacije */
+  /* animation: mymove1 4s both 1s; */
+  /* duža verzija pisanja animacije */
+  animation-name: mymove1;
+  animation-duration: 4s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes mymove1 {
+  from {
+    top: -600px;
+    background-color: rgba(118, 58, 0, 0.5);
+  }
+  to {
+    top: 0px;
+    background-color: rgba(118, 58, 0, 0.5);
+  }
+}
+#kocka2 {
+  width: 300px;
+  height: 300px;
+  margin: 0 65px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -600px;
+  border: 10px solid white;
+  background-color: rgba(181, 55, 31, 0.5);
+  animation: mymove2 3.5s both 2s;
+  animation-timing-function: ease;
+}
+
+@keyframes mymove2 {
+  from {
+    top: -600px;
+    background-color: rgba(181, 55, 31, 0.5);
+  }
+  to {
+    top: 0px;
+    background-color: rgba(181, 55, 31, 0.5);
+  }
+}
+#kocka3 {
+  width: 300px;
+  height: 300px;
+  margin: 0 65px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -600px;
+  border: 10px solid white;
+  background-color: rgba(233, 195, 33, 0.5);
+  animation: mymove3 3s both 3s;
+  animation-timing-function: ease;
+}
+
+@keyframes mymove3 {
+  from {
+    top: -600px;
+    background-color: rgba(233, 195, 33, 0.5);
+  }
+  to {
+    top: 0px;
+    background-color: rgba(233, 195, 33, 0.5);
+  }
+}
+.slovo {
+  font-size: 150px;
+  font-family: monospace;
+  color: white;
+}
+
+#kocka1:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  border: 8px solid black;
+}
+
+#kocka2:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  border: 8px solid black;
+}
+
+#kocka3:hover {
+  cursor: pointer;
+  opacity: 0.3;
+  border: 8px solid black;
+}
+
+/*# sourceMappingURL=style.css.map */

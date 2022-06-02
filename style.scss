@@ -1,0 +1,99 @@
+@mixin box-size{
+    width: 300px;
+    height: 300px;
+    margin: 0 65px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -600px;
+    border: 10px solid white;
+}
+
+@mixin box-hover {
+    cursor: pointer;
+    opacity: 0.3;
+    border: 8px solid black;
+}
+
+$brown: rgba(#763a00, 0.5);
+$red: rgba(#b5371f, 0.5);
+$yelllow: rgba(#e9c321, 0.5);
+
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(background.jpg);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 17rem auto;
+}
+
+#kocka1{
+    @include box-size;
+    background-color: $brown;
+
+    /* skracena verzija pisanja animacije */
+    /* animation: mymove1 4s both 1s; */ 
+    
+    /* duža verzija pisanja animacije */
+    animation-name: mymove1;
+    animation-duration: 4s;
+    animation-fill-mode: both;  
+    animation-delay: 1s;
+    animation-timing-function: ease;
+}
+
+@keyframes mymove1 {
+    from {top: -600px; background-color: $brown;}
+    to {top: 0px; background-color: $brown;}
+  }
+
+#kocka2{
+    @include box-size;
+    background-color: $red;
+    animation: mymove2 3.5s both 2s;
+    animation-timing-function: ease;
+}
+
+@keyframes mymove2 {
+    from {top: -600px; background-color: $red;}
+    to {top: 0px; background-color: $red;}
+  }
+
+#kocka3{
+    @include box-size;
+    background-color: $yelllow;
+    animation: mymove3 3s both 3s;
+    animation-timing-function: ease;
+}
+
+@keyframes mymove3 {
+    from {top: -600px; background-color: $yelllow;}
+    to {top: 0px; background-color: $yelllow;}
+  }
+
+.slovo{
+    font-size: 150px;
+    font-family: monospace;
+    color: white;
+}
+
+#kocka1:hover{
+    @include box-hover;
+}
+
+#kocka2:hover{
+    @include box-hover;
+}
+
+#kocka3:hover{
+    @include box-hover;
+}
